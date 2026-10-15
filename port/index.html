@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Marie Yvette Umwari Umunezero — Frontend & UI/UX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6e9e8;--ink:#17141a;--mut:#5d5560;--card:#fff8f6;--acc:#c2185b;--ln:#17141a22;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16121a;--ink:#f6e9e8;--mut:#b5a9b3;--card:#211b27;--acc:#ff7eb3;--ln:#f6e9e822}}
+:root[data-theme="dark"]{--bg:#16121a;--ink:#f6e9e8;--mut:#b5a9b3;--card:#211b27;--acc:#ff7eb3;--ln:#f6e9e822}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+a{color:inherit}.w{max-width:1040px;margin:auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--ln)}
+nav .w{display:flex;align-items:center;gap:18px;height:58px}
+.logo{font:700 20px Fraunces,Georgia,serif;text-decoration:none;margin-right:auto}.logo b{color:var(--acc)}
+nav a.l{font:500 13px 'JetBrains Mono',monospace;text-decoration:none;color:var(--mut)}nav a.l:hover{color:var(--acc)}
+#th{background:none;border:1px solid var(--ln);color:var(--ink);border-radius:20px;padding:4px 12px;font:500 12px 'JetBrains Mono',monospace;cursor:pointer}
+@media(max-width:640px){nav a.l{display:none}}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding:56px 0 40px}
+.tag{font:500 13px 'JetBrains Mono',monospace;color:var(--acc)}
+h1{font:700 clamp(38px,6vw,68px)/1.02 Fraunces,Georgia,serif;margin:10px 0 18px;letter-spacing:-.02em}
+h1 i{color:var(--acc)}.lead{color:var(--mut);max-width:520px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.b{padding:11px 20px;border-radius:8px;border:1.5px solid var(--ink);text-decoration:none;font-weight:600;font-size:14px}
+.b.p{background:var(--ink);color:var(--bg)}.b:hover{border-color:var(--acc)}
+.ph{position:relative}.ph img{width:100%;border-radius:220px 220px 14px 14px;display:block;box-shadow:12px 12px 0 var(--acc)}
+.code{margin-top:28px;background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:14px 16px;font:400 13px/1.7 'JetBrains Mono',monospace;max-width:480px}
+.code span{color:var(--acc)}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.ph{max-width:340px;order:-1}}
+section{padding:56px 0;border-top:1px solid var(--ln)}
+h2{font:700 32px Fraunces,Georgia,serif;margin:0 0 6px}h2+p{color:var(--mut);margin:0 0 28px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.c{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:20px}
+.c h3{margin:0 0 10px;font:500 13px 'JetBrains Mono',monospace;color:var(--acc);text-transform:uppercase}
+.pills{display:flex;flex-wrap:wrap;gap:8px}.pills span{border:1px solid var(--ln);border-radius:20px;padding:3px 12px;font:400 13px 'JetBrains Mono',monospace}
+.tl{border-left:2px solid var(--acc);padding-left:20px}.tl div{margin-bottom:22px}.tl b{display:block}.tl small{font:400 12px 'JetBrains Mono',monospace;color:var(--mut)}
+footer{padding:40px 0;border-top:1px solid var(--ln);color:var(--mut);font-size:14px}
+.ct a{display:block;font:700 clamp(20px,4vw,34px) Fraunces,Georgia,serif;text-decoration:none;margin:4px 0}.ct a:hover{color:var(--acc)}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.pc{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s}
+.pc:hover{transform:translateY(-4px);border-color:var(--acc)}
+.pc h3{font:700 22px Fraunces,Georgia,serif;margin:0}.pc p{color:var(--mut);margin:0;flex:1;font-size:15px}
+.pc .b{align-self:flex-start}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font:400 11px 'JetBrains Mono',monospace;color:var(--acc);border:1px solid var(--ln);border-radius:20px;padding:2px 10px}
+.ux .shot{aspect-ratio:16/10;border-radius:10px;border:1px dashed var(--ln);background:var(--bg);display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;color:var(--mut);font:400 12px 'JetBrains Mono',monospace;overflow:hidden}
+.ux .shot img{width:100%;height:100%;object-fit:cover;display:block}
+</style>
+</head>
+<body>
+
+<nav><div class="w"><a class="logo" href="#top">MY<b>.</b>dev</a><a class="l" href="#about">about</a><a class="l" href="#skills">skills</a><a class="l" href="#projects">projects</a><a class="l" href="#uiux">ui/ux</a><a class="l" href="#path">path</a><a class="l" href="#contact">contact</a><button id="th" aria-label="Toggle theme">theme</button></div></nav>
+
+<main class="w" id="top">
+<div class="hero"><div>
+<div class="tag">// hello, world — Kigali, Rwanda</div>
+<h1>Marie Yvette <i>Umwari</i> Umunezero</h1>
+<p class="lead">Frontend developer &amp; UI/UX designer. I build clean, responsive interfaces in HTML, CSS, JavaScript and React, and design them in Figma, with a marketing background that keeps users at the center.</p>
+<div class="btns"><a class="b p" href="#projects">View projects</a><a class="b" href="https://github.com/umwariyvette95-jpg" target="_blank" rel="noopener">GitHub ↗</a><a class="b" href="#contact">Get in touch</a></div>
+<div class="code"><span>const</span> yvette = {<br>&nbsp;&nbsp;role: <span>"Frontend &amp; UI/UX"</span>,<br>&nbsp;&nbsp;stack: [<span>"HTML"</span>,<span>"CSS"</span>,<span>"JS"</span>,<span>"React"</span>,<span>"Figma"</span>],<br>&nbsp;&nbsp;learning: <span>"UI/UX @ Solvit Africa"</span><br>};</div>
+</div><div class="ph"><img alt="Portrait of Marie Yvette" src="/image/WhatsApp Image 2026-10-15 at 15.36.25.jpeg"></div></div>
+
+<section id="about"><h2>About me</h2><p>Where analytical thinking meets creative building.</p>
+<div class="g"><div class="c"><h3>Now</h3>I'm a frontend developer in training, turning designs into fast, accessible, mobile-friendly web pages, and designing my own interfaces in Figma.</div>
+<div class="c"><h3>Background</h3>Studied Biology, now completing a Bachelor in Business Information &amp; Communication Technology at Mount Kigali University.</div>
+<div class="c"><h3>Edge</h3>Five years in digital marketing means I think about real users, clear messaging and measurable results, not only code.</div></div></section>
+
+<section id="skills"><h2>Tech skills</h2><p>Tools I build and design with.</p>
+<div class="g"><div class="c"><h3>Frontend</h3><div class="pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>REST APIs</span><span>TanStack Query</span><span>Responsive</span><span>Git &amp; GitHub</span></div></div>
+<div class="c"><h3>Design</h3><div class="pills"><span>Figma</span><span>UI/UX</span><span>Wireframing</span><span>Prototyping</span></div></div>
+<div class="c"><h3>Data</h3><div class="pills"><span>Excel</span><span>Data Analysis</span><span>Analytics</span></div></div>
+<div class="c"><h3>Languages</h3><div class="pills"><span>Kinyarwanda</span><span>English</span><span>French</span><span>Spanish (basic)</span></div></div></div></section>
+
+<section id="projects"><h2>Projects</h2><p>Selected work from my GitHub, from vanilla JavaScript to React and Next.js.</p>
+<div class="pg">
+<article class="pc"><div class="tags"><span>React</span><span>Tailwind</span><span>TanStack Query</span><span>Zustand</span><span>Axios</span></div><h3>ShopNow — E-Commerce Client</h3><p>Full e-commerce frontend with product listing, cart and loading skeletons, powered by an API with smart data caching.</p><a class="b" href="https://github.com/umwariyvette95-jpg/e-commerce-app" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>React</span><span>Vite</span><span>Tailwind v4</span><span>Axios</span></div><h3>Ecomus Storefront</h3><p>Premium responsive storefront with authentication, built on a live REST API with Swagger documentation.</p><a class="b" href="https://github.com/umwariyvette95-jpg/ecomerce-autho" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>React</span><span>Recharts</span><span>React Router</span></div><h3>Hope UI Clone</h3><p>Pixel-accurate clone of an admin dashboard's File Manager page, with charts and centralized state.</p><a class="b" href="https://github.com/umwariyvette95-jpg/hope-ui-clone" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>Next.js</span><span>App Router</span><span>Tailwind</span></div><h3>My Learning Journey</h3><p>Multi-page personal site documenting my path into web development, with blog notes on frontend, backend and mobile.</p><a class="b" href="https://github.com/umwariyvette95-jpg/My-Learning-Journey" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>React</span><span>Vite</span><span>Tailwind</span><span>Axios</span></div><h3>Story Teller</h3><p>Multi-page React app with routing and API data fetching, styled with Tailwind CSS.</p><a class="b" href="https://github.com/umwariyvette95-jpg/story-teller" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>JavaScript</span><span>Fetch API</span><span>Local Storage</span></div><h3>API Data Fetching Module</h3><p>Modular JavaScript project that fetches posts from an online API with Promises and async/await, and stores data in Local Storage.</p><a class="b" href="https://github.com/umwariyvette95-jpg/api-module-app" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>HTML</span><span>Tailwind</span><span>CSS</span></div><h3>Wedding Invitation</h3><p>Elegant single-page wedding invitation with custom typography, designed to look good on any screen.</p><a class="b" href="https://github.com/umwariyvette95-jpg/INVITATION" target="_blank" rel="noopener">View code ↗</a></article>
+<article class="pc"><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><h3>ExploreHub</h3><p>Interactive vanilla JavaScript app with a dark/light theme, live search, bucket list and toast notifications.</p><a class="b" href="https://github.com/umwariyvette95-jpg/uganda" target="_blank" rel="noopener">View code ↗</a></article>
+</div>
+<div class="c" style="margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap"><span><b>35 repositories</b> and growing, with new frontend work each week.</span><a class="b" href="https://github.com/umwariyvette95-jpg/?tab=repositories" target="_blank" rel="noopener">Browse all on GitHub ↗</a></div></section>
+
+<section id="uiux"><h2>UI/UX Design</h2><p>Interfaces I designed in Figma, from wireframe to prototype.</p>
+<div class="pg">
+<article class="pc ux">
+<div class="shot">Add a screenshot: images/ux-project.jpg</div>
+<div class="tags"><span>Figma</span><span>Wireframing</span><span>Prototyping</span><span>UI Design</span></div>
+<h3>YOUR PROJECT NAME</h3>
+<p>Write 1–2 sentences: what the app or website is, who it is for, and the problem your design solves.</p>
+<a class="b p" href="PASTE-YOUR-FIGMA-LINK-HERE" target="_blank" rel="noopener">View in Figma ↗</a>
+</article>
+</div></section>
+
+<section id="path"><h2>Learning path</h2><p>Recent tech training, plus experience that shaped how I design.</p>
+<div class="tl"><div><small>Jul 2026 – Oct 2026 · in progress</small><b>UI/UX Design Program</b>Solvit Africa</div>
+<div><small>ongoing</small><b>B.Sc. Business Information &amp; Communication Technology</b>Mount Kigali University</div>
+<div><small>Dec 2021 – Aug 2025</small><b>Marketing Officer</b>Smart I Shops · Hotel Riad Darna · Balearia. Digital campaigns, analytics and content, lifting engagement by 25% at Smart I Shops.</div></div></section>
+
+<section id="contact" class="ct"><h2>Let's build something</h2><p>Open to frontend, UI/UX and junior developer opportunities.</p>
+<a href="mailto:Umwariyvette95@gmail.com">Umwariyvette95@gmail.com</a><a href="tel:+250788978105">+250 788 978 105</a>
+<a href="https://www.linkedin.com/in/umwari-umunezero-marie-yvette-b9143933b" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/umwariyvette95-jpg" target="_blank" rel="noopener">GitHub ↗</a></section>
+</main>
+
+<footer><div class="w">© 2026 Marie Yvette Umwari Umunezero · Kigali, Rwanda</div></footer>
+
+<script>
+var r=document.documentElement,b=document.getElementById('th');
+try{var s=localStorage.getItem('t');if(s)r.setAttribute('data-theme',s)}catch(e){}
+b.onclick=function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');var n=d==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('t',n)}catch(e){}};
+</script>
+</body>
+</html>
